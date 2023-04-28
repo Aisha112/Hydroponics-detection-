@@ -62,7 +62,7 @@ st.markdown(css_style, unsafe_allow_html=True)
 
 def get_prediction_image(image_data, header_data):
   #copy the URL
-  url = 'https://yamunainstance1-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/730888e5-b970-4538-998d-af77d7c46a67/classify/iterations/Iteration1/image'
+  url = 'https://aishainstance1-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/9a787d1e-5250-426d-a718-fcf296ab88cf/classify/iterations/Iteration2/image'
   r = requests.post(url,headers = header_data, data = image_data)
   response = json.loads(r.content)
   print(response)
@@ -70,13 +70,13 @@ def get_prediction_image(image_data, header_data):
 
 def get_prediction_link(link, header_data):
   #copy the endpoint URL
-  url = 'https://yamunainstance1-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/730888e5-b970-4538-998d-af77d7c46a67/classify/iterations/Iteration1/url'
+  url = 'https://aishainstance1-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/9a787d1e-5250-426d-a718-fcf296ab88cf/classify/iterations/Iteration2/url'
   r = requests.post(url,headers = header_data, data = json.dumps(link))
   response = json.loads(r.content)
   print(response)
   return response
 
-subscription_key = '712fb8ca42394295b148d5d78769a25e'#prediction key
+subscription_key = '2f48e8d169b448ea931714136fd9326f'#prediction key
 
 #imagine cup
 st.title("Hydroponic Lettuce with Deficiency")
